@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controles</title>
+
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/script.js"></script>
+
+<!-- MALA PRACTICA va en un js
+    <script>
+        function saludar(){
+            alert("Hola mundo");
+        }
+    </script>
+-->
+
+<!-- MALA PRACTICA va en un css
+    <style>
+        label{color:blue}
+    </style>
+-->
+
+</head>
+<body>
+    <form action="./pagina2.html" method="GET">
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <div>
+                <label for="txtNombre">Nombre</label>
+                <input type="text" id="txtNombre" name="nombre" required>
+            </div>
+
+            <div>
+                <label for="txtClave">Contraseña</label>
+                <input type="password" id="txtClave" name="clave" required>
+            </div>
+
+            <div>
+                <label for="txtMail">Email</label>
+                <input type="email" id="txtMail" name="email" required>
+            </div>
+
+            <div>
+                <label for="txtEdad">Contraseña</label>
+                <input type="text" id="txtEdad" name="edad" value="23" disabled>
+            </div>
+
+            <div>
+                <label for="cboPais">Pais</label>
+                <select name="pais" id="codPais">
+                    <optgroup label="America">
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Peru">Peru</option>
+                    </optgroup>
+                    <optgroup label="Europa">
+                            <option value="España">Argentina</option>
+                            <option value="Italia">Brasil</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Genero</legend>
+                <input type="radio" name="sexo" id="rdoMasculino"><label for="rdoMasculino">Masculino</label>
+                <input type="radio" name="sexo" id="rdoFemenino"><label for="rdoFemenino">Femenino</label>
+            </fieldset>
+            
+
+            <label for="textAreaComentarios">Comentarios:</label>
+            <div>
+                <textarea name="" id="textAreaComentarios" cols="30" rows="10"></textarea>
+            </div>
+
+
+
+
+
+
+            <input type="submit" value="Login">
+            <input type="reset" value="Limpiar Formulario">
+        </fieldset>
+    
+    </form>
+
+<!-- MALA PRÁCTICA 
+    <button onclick="saludar();">Saludar</button>
+    -->
+    <button id="btnSaludar">Saludar</button>
+
+
+
+</body>
+</html>

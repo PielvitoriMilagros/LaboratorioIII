@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+ 
+        let array = ["juan","ana","Julia","Adrian","Lucia"];
+    //    let numeros = [2,3,4,5,6];
+
+// recibe una funcion callback
+// recorre todos los elementos del array, se los tira al callback
+//elemento es la variable donde se guarda cada elemento del array
+// ejecuta la comparacion para cada elemento y devuelve true o false si existe aunque sea alguno
+
+// Devuelve true
+console.log(array.some(elemento => elemento === "Julia"));
+// Devuelve false
+console.log(array.some(elemento => elemento === "Juliana"));
+
+// Devuelve false porque TODOS LOS ELEMENTOS tienen que coincidir
+console.log(array.every(elemento => elemento === "Julia"));
+// Devuelve true
+console.log(array.every(elemento => elemento.includes('a')));
+
+console.log(array.every(elemento => elemento.length >= 3));
+console.log(array.every(elemento => elemento.length > 3));
+
+/*
+
+function operar(pepe,a ,b){
+    console.log(pepe(a,b)); // Ejecuta la funcion que corresponde por la llamada
+    console.log(pepe); // Toma el valor de toda la funcion porque no tiene parentesis
+}
+
+function sumar(x,y){
+    return x + y;
+}
+function restar(x,y){
+    return x - y;
+}
+function dividir(x,y){
+    return x / y;
+}
+function multiplicar(x,y){
+    return x * y;
+}
+
+operar(sumar,5,7);
+operar(restar,56,6);
+operar(multiplicar,20,3);
+operar(dividir,55,5);
+
+
+*/
+
+/*
+let numeros = [2,100,4,3,1,6];
+console.log(numeros.sort( (a,b) => a-b));
+
+let nombres = ["Juan","Ana","Julia","Adrian","Lucia"];
+let personas = [
+    {nombre:"Juan", edad:30},
+    {nombre:"Alfredo", edad:21},
+    {nombre:"Juana", edad:47},
+    {nombre:"Jazmin", edad:25}
+];
+
+console.log(personas);
+
+personas.sort((p1,p2)=>p1.edad - p2.edad);
+console.log(personas);
+
+*/
+
+// Cuando se escribe ... se copia el array elemento por elemento. Ej:
+
+function sumar(x,y){
+console.log(x+y);
+}
+let num=[4,3];
+sumar(...num);
+
+
+// Puedo declarar dos variables IGUALES a la propiedad del objeto y utilizarlas asi por afuera
+let p = {
+    nombre:"Sofia",
+    edad:"40"
+};
+
+let {nombre,edad} = p;
+
+console.log(nombre + " " + edad);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+Interprete motor javascript Chrome
+framework --> Conjunto de funciones que facilita la programacion
+
+servidores node --> framework express --> genera un servidores
+
+var x=30;
+console.log(typeof x);  --> Devuelve un string con el tipo de dato de la variable
+
+Ctrl + ñ
+
+cmd --> DOS
+powershell --> Parecido a Linux
+Git Bash --> Linux
+
+Para saber si tiene instalado node:
+node -v
+
+node nombre_javascript_sin_.js  --> Me ejecuta lo que se vaya  amostrar por consola
+
+var x=function(){
+return 4 + 3;
+}
+console.log(x);
+
+Declarar un objeto literal vacio:   var x = {}
+Declarar un objeto literal cargado. Entre llaves de apertura y cierre va clave: valor
+var x = {
+    nombre:"Juan",
+    apellido:"Perez",
+    edad: 30,
+    saludar: function(){
+        return "Hola, me llamo " + this.nombre;
+    }
+};
+console.log(x.saludar());
+
+
+Se puede realizar una funcion constructora:
+function Persona(nombre,apellido,edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.saludar = function(){
+        return "Hola, me llamo " + this.nombre;
+    }
+};
+
+var p1 = new Persona("Jose","Alvarez",34);
+
+console.log(p1.saludar());
+
+
+this en javascript tiene que ver con el contexto en el que está declarada la variable
+
+p1.altura = 1.80; --> Le asigno la propiedad nueva altura, que no la tenia pero se crea en el momento
+si quisiera que TODOS los objetos de Persona incluyeran esa propiedad, tengo que usar un prototype.
+Persona.prototype.altura = 1.50; --> Valor por defecto
+
+En javascript no existen sobrecargas de metodos.
+
+HACER FORMULARIO PARA UN ANUNCIO
+TITULO
+TEXT-AREA con descripcion
+RADIOBUTTON venta o alquiler
+precio
+3 textboxs: 
+        dormitorios
+        baños
+        garages
+        de tipo number, que el numero minimo sea 1 (excepto garage) y como máximo 5
+BOTON ENVIAR (recordar como hacer el submit y el prevent default)
+titulo/descripcion/operacion/precio
+
+en javascript los array son objetos. un array literal es    var x = [];
+sino existe también var x = new array();
+
+array.push y le ponemos lo que queremos. Se puede guardar cualquier cosa.
+funcion constructora persona para armar un objeto igual al formulario.
+Cuando se apreta enviar abortas el submit y construis un objeto con lo que está cargado.
+var anuncios = []; --> Cada vez que haces submit construis un array y lo vas invocando
+console.log de anuncios para que se vea en la consola del navegador cada vez que se carga algo

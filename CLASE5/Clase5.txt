@@ -1,0 +1,52 @@
+Con el addeventlistener puedo ir agregandole funciones a un boton, por ejemplo
+
+document.getElementById('id_del_formulario');
+document.forms[0]  -->  Referencia al formulario
+
+SIEMPRE usar un console.log(contenido) si no estoy segura de qué tiene contenido
+
+Formas para tener la referencia al formulario.
+    console.log(document.forms[0]);
+    console.log(document.getElementsByTagName('form')[0]);
+    console.log(document.getElementById('frmAlta'));
+    console.log(document.getElementsByClassName('frmClase')[0]);
+
+Buena práctica: asignarlo a una variable
+ frm = document.forms[0];
+
+ Es como una constante, porque la dirección de memoria del formulario no va a cambiar nunca
+
+ El metodo se puede usar como propiedad. Por ejemplo la propiedad onsubmit del objeto, es el manejador del evento submit
+ el addeventlistener es como un setter de la propiedad
+por ejemplo, en vez de usar addeventlistener con submit, se puede hacer frm.onsubmit
+
+addeventlistener se pone como primer parámetro el nombre del evento, y como segundo el comportamiento que va a tener
+
+TODO ES ASINCRÓNICO
+Cuando suceda el primer parámetro, el nombre del evento, se va a ejecutar el comportamiento. Como delegados en C#. El programador no va y ejecuta la función, depende de cómo utilice el usuario
+
+Submit es el único que utiliza el preventDefault, para que no abra una página nueva.
+Por esto, en general es mejor utilizar una funcion anónima dentro del código que estoy escribiendo, para no perder la referencia a de dónde viene.
+
+CallBack --> Se le pasa una tarea a alguien que en algún momento se va a ejecutar, pero no lo hago yo.
+
+Con el callback se le puede agregar funcionalidad extra a funciones. Similas al ll_sort de C
+function operar(a,b,callback){
+    return callback(a,b);
+}
+console.log("La respuesta es "+operar(4,5,sumar));
+console.log("La respuesta es "+operar(4,5,restar));
+
+
+ console.log(frm.elements);
+Puedo recorrerlo en lugar de hacer un document.getElementById para cada elemento
+
+for(elemento in frm.elements){ } --> Devuelve las claves. En un array nos devuelve el indice.
+for(elemento of frm.elements){ } --> Devuelve los valores. En un array nos devuelve el value.
+
+Para hacer un alta viaja una mascota sin id, el servidor se lo pone
+Para hacer una baja, viaja sólo el id
+Para hacer una modificación, se necesita tanto la mascota como el id
+
+
+

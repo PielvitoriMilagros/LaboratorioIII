@@ -1,0 +1,4 @@
+- Abrir la consola con Ctrl + ñ (en donde está el server.js mejor)
+- Asegurarse que está el server.js con ls
+- Escribir: node server.js --> Para iniciar el servidor
+

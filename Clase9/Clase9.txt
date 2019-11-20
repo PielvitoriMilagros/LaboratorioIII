@@ -1,0 +1,61 @@
+CLASE 9
+
+Abrir el modelo de parcial
+Abrir consola en donde esté el server y escribir node server.js
+Abrir Chrome en puerto 3000 ---> http://localhost:3000/
+Mover todas las llamadas al servidor a otro archivo.js  por ejemplo dataaccess.js o dispatcher.js
+
+
+TYPESCRIPT
+
+Abrir consola
+Usar manejador de paquetes de node
+
+	npm install -g typescript  --> Para instalar en TODO, no solo en este directorio
+	tsc -v   --> para saber si está instalado
+
+Creo el directorio de carpetas --> index.html  -  ejemplo.ts -> esto es typescript
+
+Por la consola con cd ingreso hasta donde tengo mi archivo.ts y escribo    tsc archivo.ts   para compilar
+Tengo que incluir en mi index.html el javascript que me creó
+
+tsc --init   --> Genera un JSON para darle toda la configuración al typescript y a su compilador
+
+tsc -w   --> sirve para que compile constantemente cada vez que le das save
+
+tsc -outFile output.js hello.ts bye.ts   --> Me mete los dos archivos ts (o todos los que ponga después) en el primero que le pase .js
+Hago lo mismo si descomento el outfile y le pongo "outFile": "./output.js",
+
+
+CAMBIANDO EL CONFIG
+
+en el module le pongo amd
+"module": "commonjs",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+"module": "amd",                     /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
+Es el manejador de los modulos, hay que ponerlo así para poder usar el reference después
+
+
+Para manejar el orden en el que se genera el .js   // le pongo el nombre del "padre", del que quiero que vaya arriba:
+arriba de todo pongo ref+tab  -->/// <reference path="acá_pongo_el_nombre_del_otro_.ts" />
+
+ "sourceMap": true,   --> Desde el debugger del Chrome te permite ver los .ts
+ 
+DECLARAR UN VECTOR
+let vector:number[] = [1,2,3,4];
+
+TUPLA --> array con distintos tipos pero siempre en el mismo orden
+let tupla:[number,string] = [1,"Ironman"];
+
+ENUM
+enum Eheroe{
+    Xmen,
+    Avenger
+}
+
+
+// Funciones
+let funcionEnviarMision = function(heroe:string):string{
+    return heroe + " enviado.";
+}
+
+

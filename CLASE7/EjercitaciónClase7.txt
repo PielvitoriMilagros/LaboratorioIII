@@ -1,0 +1,6 @@
+Mockaroo --> Generar un archivo de paises y ciudades
+Paises --> ComboBox con Argentina-Chile-Uruguay
+Ciudades --> ComboBox con Ciudades
+
+Cuando selecciono un pais tiene que cargarse con las ciudades que corresponda
+El evento al que hay que pegarle es al change del select

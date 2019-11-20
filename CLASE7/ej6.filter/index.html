@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nombres = ["Juan", "Ana", "Julia", "Adrian", "Lucio"];
+
+      let numeros = [2, 4, 3, 5, 6];
+
+      let dobles;
+
+      // El callback que se le pasa a filter tiene que devolver booleano
+      // El elemento vuelve TAL CUAL para los cuales el elemento devuelve true
+      // Filter va a tener el mismo tamaño del array o va a ser menor
+      console.log(nombres.filter(elemento => elemento.includes('a')));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+
+var frm;
+
+// Con funcion anonima seria
+// windows.addEventListener("load", function(){
+// });
+
+window.addEventListener("load", inicializarManejadores);
+
+
+function inicializarManejadores(){
+    // console.log(document.getElementsByTagName('form')[0]);
+    // console.log(document.getElementById('frmAlta'));
+    // console.log(document.getElementsByClassName('frmClase')[0]);
+
+    frm = document.forms[0];
+//    frm.onsubmit = function(){}
+
+// Conviene hacerlo así en este caso, para no perder la referencia del evento que lo está llamando
+    // frm.addEventListener('submit', function(e){
+    //     e.preventDefault();
+    // });
+
+    frm.addEventListener('submit',manejadorSubmit);
+}
+
+//Usualmente se le pasa e como parametro que es de tipo evento, que en una de sus propiedades tiene el emisor del evento
+function manejadorSubmit(e){
+    e.preventDefault();
+// Quién emitió el evento
+        // console.log (e.target);
+
+}
+
+
+
+
+
+
+/* Ejemplo CALLBACK
+
+function operar(a,b,callback){
+    return callback(a,b);
+}
+
+console.log("La respuesta es "+operar(4,5,sumar));
+console.log("La respuesta es "+operar(4,5,restar));
+
+function sumar(x,y){
+    return x+y;
+}
+function restar(x,y){
+    return x-y;
+}
+function multiplicar(x,y){
+    return x*y;
+}
+function dividir(x,y){
+    let z;
+    if(y != 0){
+        z=x/y;
+    }
+    return z;
+}
+*/

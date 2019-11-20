@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let nombres = ["Juan", "Ana", "Julia", "Adrian", "Lucio"];
+
+      let personas = [
+        { nombre: "Jose", edad: 30, sexo: "m" },
+        { nombre: "Daniel", edad: 40, sexo: "m" },
+        { nombre: "Juli", edad: 20, sexo: "f" },
+        { nombre: "Alfredo", edad: 34, sexo: "m" }
+      ];
+      /*      
+      let hombres = personas.filter(persona => persona.sexo === "m");
+      console.log(hombres);
+
+      let edades = hombres.map(hombre => hombre.edad);
+      console.log(edades);
+
+      let sumaEdad = edades.reduce( (acumulador,elemento)=> acumulador+elemento, 0 );
+      console.log(sumaEdad);
+*/
+ //Se pueden unir los tres y hacer
+ // Se agrega además el promedio en lugar de la suma de edades con más propiedades del reduce
+      let promedioEdades = personas.filter(persona => persona.sexo === "m")
+                             .map(hombre => hombre.edad)
+                             .reduce((suma, edad, indice, array) => suma + edad/array.length, 0);
+
+      console.log(promedioEdades);
+    </script>
+  </body>
+</html>

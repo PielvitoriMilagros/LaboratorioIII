@@ -1,0 +1,156 @@
+CLASE 3 - 03/09
+
+Etiquetas semánticas a utilizar
+
+<header>	--> Encabezado de la página principal (o de distintas secciones) *primer vistazo cuando abris la página*
+<nav>		--> Barra de navegación.
+<section>	--> Agrupa contenido en común. No es el contenido principal del sitio
+<article>	--> Relleno de la página principal. Puede haber varios dentro de cada section. No tienen que ver con el resto de la página.
+<main>		--> Contenido principal de la página
+<aside>		--> Normalmente va al lateral izquierdo o derecho, cosas externas a la página. Publicidades, links a reder sociales.
+<footer>	--> Pie de página
+
+Antes se realizaban con <div>
+
+<meta name="description" content="Texto que se muestra en la búsqueda de Google bajo el enlace">
+
+CSS
+
+<style>		--> Agregar código css directamente al html
+<link>		--> Agregar un archivo css al html
+
+DOM --> Document Object Model
+		Árbol en donde
+		HTML--head--link
+			--body--nav
+				  --section
+				  
+Archivos .css
+index.css --> Será el css de la página index.html
+SINTAXIS CSS  -->  selector { propiedad : valor }
+p { color : red } -->  A todos los párrafos los pone en color rojo
+
+p {
+	color : blue;
+	background-color : red;
+	text-align : center;
+}
+
+Para incluirlo en mi html, en la parte donde están los meta tengo que poner un link
+<link rel="stylesheet" href="./css/index.css">
+
+Js nativo = document.getElementsByTagName("p");
+					.querySelectorAll("#miparrafo");
+					.getElementsById
+					.getElementsByName
+
+POR ETIQUETA PARA TODOS LOS P					
+p {
+    color : red;
+}
+
+POR ID
+en el html hay que poner <p id="miparrafo">
+el # significa el id
+#miparrafo{
+    color: darkgreen;
+}
+
+POR CLASE
+en el html hay que poner <p class="azul">
+el . significa el clase
+.azul{
+    background-color: blue;
+}
+
+Se pueden aplicar las mismas reglas de estilo a diferentes selectores:
+p,h1,#miclave {
+    color : red;
+}
+
+*{  padding : 0;
+	margin : 0; } --> El * quiere decir que, aplica a todos los elementos del DOM.
+	
+Para fabricar colores se puede hacer rgb(0,0,0) --> de 0 a 255
+Para modificar la opacidad se agrega un parametro más, es   rgba(0,0,0,1) --> de 0 a 1 para la opacidad
+
+body{
+height: 2000px;									--> Altura de la página
+background-image: url("../img/foto.jpg");		--> En todos los body pongo una foto de fondo
+background-repeat: no-repeat;					--> No repite la foto por toda la página
+background-attachment: fixed;					--> Que no se mueva el background a pesar que me muevo por la página
+background-position: center;					--> Imagen centrada
+}
+
+Se puede poner como:
+
+body{
+height: 2000px;
+background: url("../img/foto.jpg") no-repeat fixed center
+}
+
+margin colapse --> aunque dos elementos tengan 10 de margen, entre ellos va a haber 10 y no 20.
+
+Tecnología flex --> Bootstrap 4
+El viewport es la parte visible de la pantalla
+
+Tengo que encerrar las cosas en "cajas"
+<header class="site-header"> --> Nombre para manejar después en el css
+.contenido-header --> Crea un div
+.barra --> encierro en otro div la imagen y el navegador
+
+CSS
+height: 100vh; --> La altura será el 100% de lo que se ve en la pantalla
+background-position: center center;		--> Centar horizontal y verticalmente
+background-size: cover;		--> Cubre centrada, el tamaño disponible (lo que se ve)
+--------
+Descargo normalize.css --> lo copio y lo pego en un archivo .css
+La agrego como hoja de estilo con link antes de la nuestra
+--------
+.barra{
+    display: flex;		--> Arma la barra, por eso iban el nav y el logo en el mismo div
+}
+
+.navegacion a{	--> Se pone el a porque, al nav, no puedo cambiarle propiedades, tengo que cambiarselo a los "hijos"
+text-decoration: none;		--> Le quita el subrayado
+color: white;
+}		--> Para todos los enlaces que estén dentro de la class navegacion
+
+El flex solo actúa sobre los primeros contenedores
+
+.barra{
+    display: flex;
+    justify-content: space-between;		--> Separa los hijos
+	align-items: center;				--> Deja los dos hijos en la misma linea
+	padding: 2rem;						--> Le agrega una medida de aprox 32px (M mayúscula)
+}
+
+Google Fonts --> Se utiliza para cambiar las tipografías
+			 --> Customize	--> elijo las que quiero
+			 --> Embed		--> Copio el link y lo pongo en mi html
+			 --> Copio la linea de font-family
+
+			 
+En vez de <h1>Venta de Casas y Departamentos <br> Exclusivos de lujo</h1>  el br
+tengo que usar    max-width: 600px;   en css
+
+body{
+    line-height: 2;
+    font-family: 'Lato', sans-serif;
+}
+
+Todo esto le pone margenes para que haya espacio entre enlace y enlace, y la segunda propiedad le quita al último de ese tipo, el margen agregado
+.navegacion a{
+text-decoration: none;
+color: white;
+margin-right: 10px;
+}
+
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+Se pone en verde oscuro cuando el mouse se apoya sobre el enlace
+.navegacion a:hover{
+    color: darkgreen;
+}

@@ -1,0 +1,6 @@
+flex-basis: calc(33.3% - 10px)  --> Permite hacer contenido responsive (que depende del tamaño la máquina calcula sola)
+
+box-sizing
+
+al display: inline block no se le pudede aplicar margin porque ocupa lo que ocupa el contenido
+al display: block se le puede poner margin y ancho

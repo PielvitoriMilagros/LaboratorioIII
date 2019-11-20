@@ -1,0 +1,79 @@
+CLASE 1
+github.com/chbaus/LaboratorioIII2019C2
+
+Visual Studio Code
+Buena practica --> Instalar Live Server
+Creo una carpeta para mi Ejercicio1
+	Creo un archivo index.html
+	! + tab  --> Pagina web basica
+<html>	--> lang --> lenguaje
+<head>	--> No se muestra dentro de la página, metadatos. Solo se muestra title
+<meta>  --> charset --> Juego de caracteres que se utilizaran, sistema de codificacion
+			viewport -> Ventana del navegador --> content="width=device-width, initial-scale=1.0" --> El ancho de lo que se ve en escala 1.0
+
+<body>	--> Todo lo que está dentro de mi página web
+
+h1 + tab	--> Arma la etiqueta solo
+	<h1></h1>	-->Título principal en la página, en negrita
+				--> Sólo un h1 por página, buena práctica
+				--> Hay hasta h6
+				--> Viene de header
+				
+<p>  --> Párrafo. Puedo escribir lorem + tab para poder escribir un texto random. Se le llama lorem ipsum. Puedo poner lorem*10 + tab y me hace muchos lorem ipsum
+	 --> Normalmente se van a encerrar dentro de div.
+<div> --> Contenedor, que no hace nada pero funciona de "caja". Modifica elc ontenido de la etiqueta, nada más.
+<span> --> Etiqueta en linea, igual que el div pero no contenedor. Modifica el contenido de la etiqueta, nada más.
+
+<ul> --> Lista no ordenada
+<ol> --> Lista ordenada
+	<li></li> --> List Item
+
+<a></a> --> Hipervinculo
+		href="./pagina2.html"   --> Apuntar a la página dos
+		--> ./ para indicar el mismo directorio
+
+<li> <a href="./pagina2.html">Ir a la pagina 2</a> </li>   --> Ir a otra pagina de mi proyecto
+<li><a href="https://www.google.com.ar" target="_blank">Ir a Google</a></li>  --> Va a google. target hace que no se reemplace mi pagina sino que abre una nueva.
+<li><a href="#top">Volver Arriba</a></li>   --> Volver arriba. En algún lado antes tengoq ue haber puesto: <a id="top"></a>
+<a href="./pagina2.html#subtitulo">Ir a Subtitulo Pagina 2</a>  --> Va a un punto en la página 2, donde hay puesto un <a id="subtitulo"></a>
+
+
+TABLA
+<table>
+th --> Encabezado, primer fila de la tabla
+ts --> Datos de las celdas
+tr>td + tab
+<td rowspan="4">Pizza</td>  --> Combinar celdas en 4 filas
+<td colspan="4">Milanesa</td> --> Combinar celdas en 4 columnas
+
+<form action="" method=""></form>  --> method GET o POST  --> para redirigir a otra pagina
+
+<label for="txtNombre">Nombre:</label>    --> Con el for enlazo el label al txt
+<input type="text" id="txtNombre" placeholder="Ingrese nombre" > --> placeholder es el mensaje en gris
+
+
+
+    <fieldset>
+        <!-- GroupBox -->
+        <legend>Datos Personales</legend>
+        <!-- Título del GroupBox -->
+        <p>
+            <label for="txtNombre">Nombre:</label>
+            <input type="text" id="txtNombre" placeholder="Ingrese nombre">
+
+            <label>Apellido:<input type="text" placeholder="Ingrese apellido"></label>
+
+            <label>Contraseña:<input type="password" placeholder="Ingrese constraseña"></label>
+        </p>
+
+    </fieldset>
+
+		
+shift + alt + flechita --> copio la linea para donde quiera
+alt + flechita --> muevo la linea del codigo
+shift + alt + f  --> Formatea
+
+
+
+
+Para ejecutar --> Click izquierdo sobre Index, Open with Live Server

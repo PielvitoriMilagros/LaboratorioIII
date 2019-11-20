@@ -1,0 +1,21 @@
+p,h1 {
+    color : red;
+}
+
+
+
+#miparrafo{
+    color: darkgreen;
+}
+
+.azul{
+    background-color: blue;
+}
+
+body{
+    height: 2000px;
+    background-image: url("../img/foto.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

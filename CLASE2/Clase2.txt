@@ -1,0 +1,100 @@
+GET --> Base de datos sin modificar, traer datos
+POST --> Modificar base de datos
+
+disabled --> no permite modificar
+readonly --> no permite modificar
+type="number" --> aparecen las flechitas
+type="range" --> min="18" max="25" value="18"
+placeholder --> mensajito gris que se borra cauando escribis encima
+
+<select name="comboBox" id="cbo"> --> Combo o menu desplegable para html
+name --> Nombre de la variable
+dentro del selecct --> option
+<option value="Argentina">Argentina</option> --> Cuando se guarda en la base de datos se guarda el value. Lo otro es para vista usuario.
+
+<optgroup> --> Le pone un titulo dentro del combo box para subdividir, por ejemplo, paises
+
+input type="hidden" --> Figura pero no se muestra. Se podria guardar algo y el usuario no se da cuenta.
+
+<fieldset> --> GroupBox
+
+input type="radio" name=Ejemplo --> Todos los name Ejemplo y type radio van a ser excluyentes entre sí
+			--> checked --> por default seleccionado
+			
+input type="checkbox"
+
+// Área multilineas para escribir libre
+            <label for="textAreaComentarios">Comentarios:</label>
+            <div>
+                <textarea name="" id="textAreaComentarios" cols="30" rows="10"></textarea>
+            </div>
+
+<label for="txtClave">Contraseña</label>
+<input type="password" id="txtClave" name="clave" required>
+
+<input type="reset"> --> Limpia todo el formulario, como si volviera a recargarlo
+
+<script> --> Meter código JS en el html --> NO ES BUENA PRACTICA
+<style>  --> Meter código CSS en el html --> NO ES BUENA PRACTICA
+CADA LENGUAJE EN EN ARCHIVO QUE LE CORRESPONDA
+
+Reglas de css --> Selector{propiedad:valor}  --> label{color:blue}
+
+Creo una carpeta llamada css y una llamada js
+dentro creo un archivo estilos.css y un script.js
+En el index:
+    <link rel="stylesheet" href="./css/estilos.css">   --> incluir mi archivo de estilos
+    <script src="./js/script.js"></script>             --> incluir mi archivo de scripts js
+
+JAVASCRIPT
+
+Cuando quiero hablar del html que me llamo, la referencia (la dirección de memoria) se obtiene con el objeto document
+document --> Referencia al HTML.
+		 --> Muchos métodos --> funcion dentro de objeto es metodo
+		 --> getElementById --> Método que trae una referencia de una etiqueta que está en el document que tiene como id lo que le paso
+		 --> document.getElementById('btnSaludar') --> Obtengo la referencia al boton.
+btnSaludar = document.getElementById('btnSaludar') --> Ahora btnSaludar en mi JS va a ser el botón que estaba en el html.
+
+Para que funcione bien el include (link) en el index, lo que hay que hacer es ponerle un manejador de eventos:
+El evento load se lanza cuando el navegador termina de renderizar window
+window.addEventListener('load'...)  --> Cuando la ventana del navegador esté cargada ...
+									-->  El evento al cual yo le quiero agregar el manejador
+
+window.addEventListener('load',function(){
+    btnSaludar = document.getElementById('btnSaludar');
+});															--> Con una funcion anónima puedo hacerlo
+
+btnSaludar.addEventListener('click',saludar); --> Se pone saludar como nombre de funcion, sin parentesis, como con delegados en c#
+
+Con el addEventListener en lugar de directamente poner el evento al que quiero que reaccione, puedo simular listas de llamadas.
+
+
+
+
+HTML
+
+&copy; --> Símbolo de CopyRight
+archivo .svg --> Imagen vectorial creada con Illustrator
+			 --> fórmula matemática, no se pixela nunca. Se obtiene a través de cálculos
+
+<img src="./img/logo.svg" alt="logo bienes raices">  --> src --> De dónde saca la imagen
+													 --> alt --> Si no puede cargar el logo qué muestra, el alternativo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PARA EJECUTAR MI CODIGO --> Click derecho 'Open with Life Server'
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+            // FUNCION FLECHA
+            // si voy a recibir un solo parametro no se necesitan parentesis
+            // si voy a recibir más de uno, o ninguno, tengo que poner parentesis
+            // si hago más de una linea tengo que usar llaves
+            // si uso llaves y quiero devolver tiene que tener un return, sino no es necesario
+            // x => x*2 es lo mismo que x => { return x*2 }
+
+            // Al forEach se le pasa una funcion como parámetro, y le tira todo el contenido del array
+
+        let array = ["juan","ana",true,23,[1,2,3],{nombre:"jorge",edad:"30"}];
+        
+        array.forEach(elemento => console.log(elemento));
+
+
+        let numeros = [2,3,4,5,6];
+
+//array.push() -> lo que pongo entre parentesis se inserta al final del array - lo contrario .pop
+//array.unshift -> lo que pongo entre parentesis se inserta al inicio del array - lo contrario .shift
+
+        let cuadrados = [];
+        let retorno = numeros.forEach(numero => cuadrados.push(numero * numero));
+        
+        console.log("Retorno   " + retorno);
+
+        console.log("Numeros   " + numeros);
+        console.log("Cuadrados   " + cuadrados);
+
+
+
+// FORMA 1
+// mostrar es un puntero, por eso se pasa sin parametros
+//        array.forEach(mostrar);
+//        function mostrar(algo){
+//            console.log(algo);
+//        }
+
+//FORMA 2
+// Otra forma de hacerlo, más elegante, si es el único lugar en el que lo voy a usar
+//array.forEach(function (algo) {
+//    console.log(algo);
+//});
+
+// FORMA 3
+//array.forEach(elemento => console.log(elemento));
+
+
+    </script>
+    
+</body>
+</html>
